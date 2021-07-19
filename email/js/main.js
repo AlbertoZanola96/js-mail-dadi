@@ -7,14 +7,23 @@ stampa un messaggio appropriato sull’esito del controllo.
 var email = ["antonio@gmail.com", "tommy@gmail.com" , "anna@libero.it", "stefano@gmail.com"];
 var emailInserita = prompt("inserisci la tua email");
 
+var mailTrovata = false;
+
 for (var i = 0; i < email.length; i++) {
-    if (emailInserita == email[i]) {
-        console.log("accesso consentito");
-    }
-    else if (emailInserita != email[i]) {
-        console.log("accesso negato");
+    var mailId = email[i];
+
+    if (mailId == emailInserita) {
+        mailTrovata = true;
     }
 }
+
+if (mailTrovata == true) {
+    console.log("accesso consentito");
+}
+else {
+    console.log("accesso negato");
+}
+
 
 
 
